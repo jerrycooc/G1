@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="./static/js/micro.tag.min.js"></script>
+		<style type="text/css">
+			#_copy {
+				align-items: center;
+				background: #4494d5;
+				border-radius: 3px;
+				color: #fff;
+				cursor: pointer;
+				display: flex;
+				font-size: 13px;
+				height: 30px;
+				justify-content: center;
+				position: absolute;
+				width: 60px;
+				z-index: 1000
+			}
+
+			#select-tooltip,
+			#sfModal,
+			.modal-backdrop,
+			div[id^=reader-helper] {
+				display: none !important
+			}
+
+			.modal-open {
+				overflow: auto !important
+			}
+
+			._sf_adjust_body {
+				padding-right: 0 !important
+			}
+
+			.enable_copy_btns_div {
+				position: fixed;
+				width: 154px;
+				left: 10px;
+				top: 45%;
+				background: #e7f1ff;
+				border: 2px solid #4595d5;
+				font-weight: 600;
+				border-radius: 2px;
+				font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+				z-index: 5000
+			}
+
+			.enable_copy_btns_logo {
+				width: 100%;
+				background: #4595d5;
+				text-align: center;
+				font-size: 12px;
+				color: #e7f1ff;
+				line-height: 30px;
+				height: 30px
+			}
+
+			.enable_copy_btns_btn {
+				display: block;
+				width: 128px;
+				height: 28px;
+				background: #7f5711;
+				border-radius: 4px;
+				color: #fff;
+				font-size: 12px;
+				border: 0;
+				outline: 0;
+				margin: 8px auto;
+				font-weight: 700;
+				cursor: pointer;
+				opacity: .9
+			}
+
+			.enable_copy_btns_btn:hover {
+				opacity: .8
+			}
+
+			.enable_copy_btns_btn:active {
+				opacity: 1
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<script type="text/javascript" src="./static/js/jquery-3.6.0.min.js"></script>
+		<link type="text/css" href="./static/css/order_me.min.css" rel="stylesheet" media="all">
+		<style>
+			.ac_footer {
+				position: relative;
+				top: 10px;
+				height: 0;
+				text-align: center;
+				margin-bottom: 70px;
+				color: #A12000;
+			}
+
+			.ac_footer a {
+				color: #A12000;
+			}
+
+			.ac_footer p {
+				text-align: center;
+			}
+
+			img[height="1"],
+			img[width="1"] {
+				display: none !important;
+			}
+		</style>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+		<title>Congratulations!</title>
+		<link href="./static/css/sweetalert.css" rel="stylesheet" type="text/css">
+		<link href="./static/css/style_1.css" rel="stylesheet" type="text/css">
+		<script>
+			var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+			var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September",
+				"October", "November", "December");
+			var now = new Date();
+			var today = monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+
+			function get_date(days) {
+				return today = monthNames[now.getMonth()] + " " + (now.getDate() - days) + ", " + now.getFullYear();
+			}
+		</script>
+		<style type="text/css">
+			*[attr-cou] {
+				display: none !important;
+			}
+
+			*[attr-lan] {
+				display: none !important;
+			}
+
+			.forceDisplay {
+				display: block !important;
+			}
+
+			.forceDisplayInline {
+				display: inline-block !important;
+			}
+		</style>
+
+		<div id="a-nav">
+			<div class="icon-nav"></div>
+			<h1>$ 1،000،000 جیتیں۔</h1>
+			<div class="icon-basket"></div>
+		</div>
+		<main>
+			<div class="content">
+				<div class="main-content" id="content1">
+					<div style="text-align:center">
+						<img src="./static/image/pk_money2.png">
+					</div>
+					<center>
+						<div class="select">آپ کے پاس ہے<font color="red"><b><span id="mins">0</span> minutes and <span
+										id="hsecs">01</span> seconds</b></font>
+							کھیلنے کے لئے یا آپ کے پوائنٹس دوسروں کو دیئے جائیں گے۔</div>
+					</center>
+					<center style="padding-top:10px">
+						<strong>نوٹ: یہ انعام محدود وقت کے لیے موزوں ہے لہٰذا جلدی کریں!</strong>
+					</center>
+					<strong>
+						<div id="spinner">
+							<img id="spinBG" src="./static/image/11.png">
+							<img id="spin" src="./static/image/PK_SPIN.png">
+							<img id="win" onclick="" src="./static/image/33.png">
+							<img class="animated rotateIn" id="iphone" src="./static/image/inter_pk.png">
+						</div>
+						<p style="text-align: center;"></p>
+						<p>comment</p>
+						<hr>
+						<p style="color: rgb(168, 167, 167);">
+							<span id="liked" onclick="total_likes();return false"
+								style="color: rgb(168, 167, 167); cursor: pointer;">Like</span> • Reply • Follow
+						</p>
+						<hr>
+
+
+						<div class="comments1">
+							<div><small><span id="likes" class="like">1,221</span> likes</small>
+							</div>
+							<div><span class="photo p1">
+									<img src="./static/image/pk3.png"></span>
+								<div class="commentsblock"><b>Àli</b>
+									<p>مجھے روپے ملے آج 1،000،000 ، میں بہت خوش ہوں!</p><small><span
+											class="like">Like</span> · <u>4 minutes </u></small>
+								</div>
+							</div>
+							<div><span class="photo p2">
+									<img src="./static/image/2.png"></span>
+								<div class="commentsblock"><b>Ayesha</b>
+									<p>میرے لیے کوئی انعام نہیں ... کیا مجھے ایک اور موقع مل سکتا ہے؟</p><small><span
+											class="like">Like</span> · <u>5 minutes </u></small>
+								</div>
+							</div>
+							<div><span class="photo p3">
+									<img src="./static/image/3.png"></span>
+								<div class="commentsblock"><b>Muhammad</b>
+									<p>میرا آج پہنچا۔ شکریہ!</p>
+									<small><span class="like">Like</span> · <u>11 minutes </u></small>
+								</div>
+							</div>
+							<div><span class="photo p4">
+									<img src="./static/image/pk1.png"></span>
+								<div class="commentsblock"><b>Manahil</b>
+									<p>او ایم جی میں جیت گیا! Wooooooo</p><small><span class="like">Like</span> · <u>15
+											minutes</u></small>
+								</div>
+							</div>
+							<div><span class="photo p5">
+									<img src="./static/image/5.png"></span>
+								<div class="commentsblock"><b>Hamza</b>
+									<p>یہ حیرت انگیز ہے میں کھیلنے کا انتظار نہیں کرسکتا!</p><small><span
+											class="like">Like</span> · <u>38 minutes</u></small>
+								</div>
+							</div>
+							<div><span class="photo p6">
+									<img src="./static/image/pk4.png"></span>
+								<div class="commentsblock"><b>Ahmed</b>
+									<p>مجھے ایک ہارنے والا کہو ، کیونکہ میں واقعی ایک چاہتا تھا!</p><small><span
+											class="like">Like</span> · <u>45 minutes</u></small>
+								</div>
+							</div>
+							<div><span class="photo p7">
+									<img src="./static/image/7.png"></span>
+								<div class="commentsblock"><b>Laiba</b>
+									<p>یہ بہت آسان تھا ، میں جیت گیا !!!!</p><small><span class="like">Like</span> ·
+										<u>1
+											hour</u></small>
+								</div>
+							</div>
+							<div><span class="photo p8">
+									<img src="./static/image/pk2.png"></span>
+								<div class="commentsblock"><b>Rabia</b>
+									<p>میں نے کبھی کچھ نہیں جیتا ، لیکن مجھے امید ہے کہ میں خوش قسمت ہوں!</p>
+									<small><span class="like">Like</span> · <u>1 hour</u></small>
+								</div>
+							</div>
+						</div>
+
+
+					</strong>
+				</div>
+			</div>
+		</main>
+
+
+		<strong>
+			<div class="sweet-overlay" id="overlay" style="opacity: 1.03; display: block;" tabindex="-1"></div>
+			<div class="sweet-overlay2" id="overlay2" style="opacity: 1.03; display: none;" tabindex="-1"></div>
+			<a href="javascript:goto();">
+				<div class="sweet-overlay3" id="overlay3" style="opacity: 1.03; display: none;" tabindex="-1"></div>
+			</a>
+
+			<div class="sweet-alert animated bounceIn visible" id="modal01">
+				<h2 style="margin-top:30px;"> مبارک ہو! </h2>
+				<p> ہر ہفتے ہم ایک خوش قسمت کسٹمر کا انتخاب کرتے ہیں جو $ 1،000،000 جیتنے کے اہل ہو۔ </p>
+				<div class="sa-button-container">
+					<div class="sa-confirm-button-container">
+						<button onclick="hidemodal01()"
+							style="display: inline-block; box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset; background-color: #3c750e;">ٹھیک
+							ہے</button>
+
+
+						<div class="la-ball-fall"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sweet-alert animated bounceIn" id="modal02">
+				<div class="sa-icon sa-success" id="success02">
+					<span class="sa-line sa-tip" id="successtip02"></span>
+					<span class="sa-line sa-long" id="successlong02"></span>
+					<div class="sa-placeholder"></div>
+					<div class="sa-fix"></div>
+				</div>
+
+
+				<h2> آپ نے (1) مزید راؤنڈ جیت لیا ہے۔ </h2>
+				<p> آؤ اس کو آزماتے ہیں! </p>
+				<div class="sa-button-container">
+					<div class="sa-confirm-button-container">
+						<button onclick="hidemodal02()"
+							style="display: inline-block; box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset; background-color: rgb(232, 66, 66);">ٹھیک
+							ہے</button>
+						<div class="la-ball-fall"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sweet-alert animated bounceIn" id="modal03">
+				<div class="sa-icon sa-success" id="success03">
+					<span class="sa-line sa-tip" id="successtio03"></span>
+					<span class="sa-line sa-long" id="successlong03"></span>
+					<div class="sa-placeholder"></div>
+					<div class="sa-fix"></div>
+				</div>
+				<h2> مبارک ہو! </h2>
+				<p> تم جیتنے کے اہل ہو!! اپنا انعام حاصل کرنے کے لیے ہدایات پر عمل کریں۔ </p>
+				<div class="sa-button-container">
+					<div class="sa-confirm-button-container">
+						<button
+							style="display: inline-block;box-shadow: rgba(140, 212, 245, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset; background-color: rgb(232, 66, 66);">
+							<a href="javascript:goto();"
+								style="padding:0px;background-color:#e84242;margin:0;border:0px;">ٹھیک ہے</a></button>
+						<div class="la-ball-fall"></div>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function() {
+						$('#overlay').click(function(e) {
+							$('#modal01').removeClass('visible');
+							$('.sweet-overlay').css('display', 'none');
+							$('#spin').addClass('spinAround');
+							$('#xmas').css('display', 'none');
+							setTimeout(function() {
+								$('#modal02').addClass('visible');
+								$('.sweet-overlay2').css('display', 'block');
+								$('#xmas').css('display', 'block');
+								$('#xmas').css('top', 'calc(50% - 210px)');
+								setTimeout(function() {
+									$('#success02').addClass('animate');
+									$('#successtip02').addClass('animateSuccessTip');
+									$('#successlong02').addClass('animateSuccessLong');
+								}, 500);
+							}, 7500);
+						});
+					});
+
+
+					$(document).ready(function() {
+						$('#overlay2').click(function(e) {
+							$('#modal02').removeClass('visible');
+							$('#overlay2').css('display', 'none');
+							$('#spin').addClass('spinAround2');
+							$('#xmas').css('display', 'none');
+							setTimeout(function() {
+								$('#iphone').css('display', 'block');
+							}, 7000);
+							setTimeout(function() {
+								$('#modal03').addClass('visible');
+								$('.sweet-overlay3').css('display', 'block');
+								$('#xmas').css('display', 'block');
+								$('#xmas').css('top', 'calc(50% - 210px)');
+								setTimeout(function() {
+									$('#success03').addClass('animate');
+									$('#successtip03').addClass('animateSuccessTip');
+									$('#successlong03').addClass('animateSuccessLong');
+								}, 500);
+							}, 8000);
+						});
+					});
+
+
+					function hidemodal01() {
+						$('#modal01').removeClass('visible');
+						$('.sweet-overlay').css('display', 'none');
+						$('#spin').addClass('spinAround');
+						$('#xmas').css('display', 'none');
+						setTimeout(function() {
+							$('#modal02').addClass('visible');
+							$('.sweet-overlay2').css('display', 'block');
+							$('#xmas').css('display', 'block');
+							$('#xmas').css('top', 'calc(50% - 210px)');
+							setTimeout(function() {
+								$('#success02').addClass('animate');
+								$('#successtip02').addClass('animateSuccessTip');
+								$('#successlong02').addClass('animateSuccessLong');
+							}, 500);
+						}, 7500);
+					}
+
+					function hidemodal02() {
+						$('#modal02').removeClass('visible');
+						$('.sweet-overlay2').css('display', 'none');
+						$('#spin').addClass('spinAround2');
+						$('#xmas').css('display', 'none');
+						setTimeout(function() {
+							$('#iphone').css('display', 'block');
+						}, 7000);
+						setTimeout(function() {
+							$('#modal03').addClass('visible');
+							$('.sweet-overlay3').css('display', 'block');
+							$('#xmas').css('display', 'block');
+							$('#xmas').css('top', 'calc(50% - 210px)');
+							setTimeout(function() {
+								$('#success03').addClass('animate');
+								$('#successtip03').addClass('animateSuccessTip');
+								$('#successlong03').addClass('animateSuccessLong');
+							}, 500);
+						}, 8000);
+					}
+				</script>
+				<script defer="" type="text/javascript">
+					setInterval('countdown()', 1000);
+
+					function countdown() {
+						var mins = parseInt(document.getElementById("mins").innerHTML);
+						var secs = parseInt(document.getElementById("hsecs").innerHTML);
+						if (mins != 0 && secs == 0) {
+							nmins = mins - 1;
+							nsecs = 59;
+						} else if (mins != 0 || secs != 0) {
+							nmins = mins;
+							nsecs = secs - 1;
+						} else if (mins == 0 && secs == 0) {
+							nmins = mins;
+							nsecs = secs;
+						}
+						document.getElementById("mins").innerHTML = nmins;
+						document.getElementById("hsecs").innerHTML = nsecs;
+						if (nsecs < 10) nsecs = "0" + nsecs;
+						document.getElementById("hsecs").innerHTML = nsecs;
+					}
+
+					function goto() {
+						location.href = 'https://lpnsnk.com/cevil2k.php?lp=1';
+					}
+				</script>
+
+			</div>
+		</strong>
+
+
+
+	</body>
+</html>
